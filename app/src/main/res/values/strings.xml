@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">YTDownloader</string>
+    <string name="download">Download</string>
+    <string name="bottominfo">ACHTUNG: Das Erstellungsdatum ist das Uploaddatum des Videos</string>
+    <string name="remainingtime">s verbleibend</string>
+    <string name="done">Done</string>
+</resources>

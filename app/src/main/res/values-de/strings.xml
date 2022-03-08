@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YTDownloader</string>
+    <string name="download">Download</string>
+    <string name="bottominfo">ACHTUNG: Das Erstellungsdatum gleicht dem Uploaddatum des Videos</string>
+    <string name="remainingtime">s verbleibend</string>
+    <string name="done">Fertig</string>
+</resources>
