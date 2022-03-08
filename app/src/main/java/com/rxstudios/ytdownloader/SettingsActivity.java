@@ -1,22 +1,15 @@
 package com.rxstudios.ytdownloader;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import com.codekidlabs.storagechooser.StorageChooser;
-
-import java.io.File;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -38,10 +31,6 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 
-    private Context getAcitvity(){
-        return this;
-    }
-
     public static class SettingsFragment extends PreferenceFragmentCompat {
         private static final String TAG = "asd";
 
@@ -56,7 +45,7 @@ public class SettingsActivity extends AppCompatActivity {
             findPreference("downloadpath").setOnPreferenceClickListener(preference -> {
                 StorageChooser storageChooser = new StorageChooser.Builder()
                         .withActivity(getActivity())
-                        .withFragmentManager(getActivity().getFragmentManager())
+                        .withFragmentManager(requireActivity().getFragmentManager())
                         .withMemoryBar(true)
                         .allowCustomPath(true)
                         .allowAddFolder(true)
@@ -64,10 +53,10 @@ public class SettingsActivity extends AppCompatActivity {
                         .build();
 
                 storageChooser.setOnSelectListener(path -> {
-                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("downloadpath", path);
-                    editor.commit();
+                    editor.apply();
                     Log.d(TAG, "onStart: Set path to: " + path);
                     //findPreference("downloadpath").setDefaultValue(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "YoutubeDL").getAbsoluteFile());
                 });
