@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/download">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="auto_download_on_share"
+            android:title="Auto download on share" />
+        <Preference
+            android:key="downloadpath"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Download path" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -17,15 +17,18 @@
             android:id="@+id/editTextUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="URL" />
+            android:ems="17"
+            android:hint="@string/url"
+            android:importantForAutofill="no"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/buttonDownload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="@string/download" />
+            android:text="@string/download"
+            tools:ignore="TextContrastCheck" />
 
         <ProgressBar
             android:id="@+id/downloadProgressbar"
@@ -60,4 +63,15 @@
         android:indeterminate="true"
         android:indeterminateTint="#000000"
         android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/settingsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:contentDescription="@string/settingsbuttondescription"
+        android:minWidth="70dp"
+        android:minHeight="70dp"
+        app:srcCompat="@drawable/ic_baseline_settings_24"
+        app:tint="?android:attr/textColorSecondary" />
 </FrameLayout>
