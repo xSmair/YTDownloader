@@ -1,4 +1,1 @@
-# YTDownloader-App for Android
-Project is on pause for now. It is working but still needs much work to be put into it especially to look good.
-
-open up in android studio -> install on device -> go to youtube video -> share -> -> YtDownloader -> download button
+# DEPRECATED - Does not work anymore and should not be used
